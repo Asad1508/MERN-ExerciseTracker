@@ -1,0 +1,10 @@
+const express=require("express")
+const exercise=express.Router()
+const Exercises=require("../controllers/noteController")
+const { protect } = require("../middleware/authMiddleware")
+exercise.get('/getnotes',protect,Exercises.getexercise)
+exercise.post('/create',protect,Exercises.createexercise)
+exercise.get('/getnotes/:id',Exercises.getNoteById)
+exercise.put('/updatenotes/:id',protect,Exercises.Updatenotes)
+exercise.delete('/deletenotes/:id',protect,Exercises.DeleteNote)
+module.exports=exercise

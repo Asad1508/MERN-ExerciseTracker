@@ -1,0 +1,31 @@
+.animate {
+    animation-name: anim;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: 1s;
+    
+  }
+  
+  @keyframes anim {
+  
+    50% {
+      transform: scale(1.2);
+      background-color: orangered;
+      box-shadow: 5px 5px 5px black;
+    }
+  
+    100% {
+  
+      color: white;
+      background-color: orangered;
+    }
+  }
+  .bg3{
+    background: url("../../images/bg3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
